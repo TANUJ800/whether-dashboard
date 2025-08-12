@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Weather Dashboard</h1>
+    <form id="weather-form" autocomplete="off">
+      <div class="search-wrapper">
+        <input type="text" id="city-input" placeholder="Enter city name..." required>
+        <div id="suggestions"></div>
+      </div>
+      <button type="submit" id="get-weather-btn">Get Weather</button>
+    </form>
+
+    <div id="weather-card" class="weather-card hidden">
+      <div class="weather-main">
+        <img id="weather-icon" src="" alt="Weather icon">
+        <div class="temp-info">
+          <h2 id="temperature">--°C</h2>
+          <p id="weather-description">--</p>
+        </div>
+      </div>
+      <h3 id="city-name">City</h3>
+      <p id="local-time"></p>
+      <div class="details">
+        <div class="detail"><span>Humidity:</span> <span id="humidity">--%</span></div>
+        <div class="detail"><span>Wind:</span> <span id="wind-speed">-- km/h</span></div>
+        <div class="detail"><span>Pressure:</span> <span id="pressure">-- hPa</span></div>
+        <div class="detail"><span>Visibility:</span> <span id="visibility">-- km</span></div>
+        <div class="detail"><span>Sunrise:</span> <span id="sunrise">--</span></div>
+        <div class="detail"><span>Sunset:</span> <span id="sunset">--</span></div>
+      </div>
+    </div>
+    <p id="error-message" class="error"></p>
+  </div>
+  <div id="background"></div>
+  <script src="script.js"></script>
+</body>
+</html>
